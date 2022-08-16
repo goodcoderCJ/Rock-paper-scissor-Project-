@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/Barlow+Semi+Condensed"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rock-paper-scissors game</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="result-enclose">
+        <div class="text-container">
+          <img src="./images/logo.svg" alt="rock paper scissors logo" />
+        </div>
+        <div class="score-enclose">
+          <p class="score-text">Score</p>
+          <p class="score">12</p>
+        </div>
+      </div>
+      <div class="icon-wrap">
+        <img class="triangle" src="./images/bg-triangle.svg" alt="triangle" />
+        <div class="paper-scissors-enclose">
+          <div class="icon-symbol-wrap paper">
+            <div class="image-wrap">
+              <img
+                class="icon-paper"
+                src="./images/icon-paper.svg"
+                alt="paper symbol"
+              />
+            </div>
+          </div>
+          <div class="icon-symbol-wrap scissors">
+            <div class="image-wrap">
+              <img
+                class="icon-scissors"
+                src="./images/icon-scissors.svg"
+                alt="scissors symbol"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="rock-enclose">
+          <div class="icon-symbol-wrap rock">
+            <div class="image-wrap">
+              <img
+                class="icon-rock"
+                src="./images/icon-rock.svg"
+                alt="rock symbol"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rules">
+      <button class="btn">Rules</button>
+    </div>
+
+    <div class="modal">
+      <div class="modal-text">
+        <p id="modal-heading">Rules</p>
+        <span id="modal-close-btn">&times;</span>
+      </div>
+      <div class="image">
+        <img src="./images/image-rules.svg" id="image-modal" />
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html> 
