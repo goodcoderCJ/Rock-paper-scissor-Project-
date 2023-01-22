@@ -72,6 +72,15 @@ body {
   font-weight: var(--heavier-weight-font);
   font-size: 1.4rem;
 }
+.playerComPicked {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid red;
+  position: relative;
+  top: 9em;
+  font-size: 0.7rem;
+}
 .icon-wrap {
   position: relative;
   text-align: center;
@@ -84,6 +93,7 @@ body {
   height: 140px;
   width: 140px;
   z-index: -1;
+  visibility: visible;
 }
 .paper-scissors-enclose {
   border: 1px solid purple;
@@ -139,6 +149,49 @@ body {
   background: linear-gradient(var(--rock-gradient1), var(--rock-gradient2));
   margin-top: 0.2em;
   box-shadow: 0px 2px 0 2px hsl(349, 81%, 39%);
+}
+.computer-container {
+  position: absolute;
+  width: 5.5em;
+  height: 5.5em;
+  border-radius: 50%;
+  right: 40%;
+  top: 49%;
+  transform: translateX(-18%);
+  background-color: rgb(9, 31, 78);
+  display: none;
+}
+.game-show-selection {
+  display: none;
+  padding: 8em 0;
+  justify-content: center;
+  border: 1px solid red;
+}
+.player-selection {
+  position: relative;
+  right: 2.5em;
+}
+.computer-selection {
+  position: relative;
+  left: 2.5em;
+}
+.game-feedback {
+  align-self: flex-end;
+}
+.win {
+  margin-bottom: 1em;
+}
+.replay {
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  border: none;
+  color: blue;
+}
+.icon-show {
+  display: block;
+}
+.icon-hide {
+  display: none;
 }
 .rules {
   display: flex;

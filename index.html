@@ -24,13 +24,17 @@
         </div>
         <div class="score-enclose">
           <p class="score-text">Score</p>
-          <p class="score">12</p>
+          <p class="score">0</p>
         </div>
+      </div>
+      <div class="playerComPicked">
+        <p>YOU PICKED</p>
+        <p>THE HOUSE PICKED</p>
       </div>
       <div class="icon-wrap">
         <img class="triangle" src="./images/bg-triangle.svg" alt="triangle" />
         <div class="paper-scissors-enclose">
-          <div class="icon-symbol-wrap paper">
+          <div class="icon-symbol-wrap paper" data-player="paper">
             <div class="image-wrap">
               <img
                 class="icon-paper"
@@ -39,7 +43,7 @@
               />
             </div>
           </div>
-          <div class="icon-symbol-wrap scissors">
+          <div class="icon-symbol-wrap scissors" data-player="scissors">
             <div class="image-wrap">
               <img
                 class="icon-scissors"
@@ -50,7 +54,7 @@
           </div>
         </div>
         <div class="rock-enclose">
-          <div class="icon-symbol-wrap rock">
+          <div class="icon-symbol-wrap rock" data-player="rock">
             <div class="image-wrap">
               <img
                 class="icon-rock"
@@ -60,6 +64,14 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="game-show-selection">
+        <div class="player-selection"></div>
+        <div class="game-feedback">
+          <p class="win">YOU</p>
+          <button class="replay">PLAY AGAIN</button>
+        </div>
+        <div class="computer-selection"></div>
       </div>
     </div>
     <div class="rules">
