@@ -20,7 +20,7 @@
   --light-weight-font: 600;
   --heavy-weight-font: 700;
   --heavier-weight-font: 900;
-  --font-family: Barlow Semi Condensed;
+  --font-family: "Barlow Semi Condensed";
   --header-outline: hsl(217, 16%, 45%);
 }
 body {
@@ -28,7 +28,7 @@ body {
     var(--background-color-inner),
     var(--background-color-blue)
   );
-  font-family: var(--font-family);
+  font-family: var(--font-family), serif;
   color: white;
 }
 .container {
@@ -71,6 +71,14 @@ body {
   color: var(--header-outline);
   font-weight: var(--heavier-weight-font);
   font-size: 1.4rem;
+}
+.newElementWrap {
+  padding: 2em 0;
+}
+.new-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .playerComPicked {
   display: none;
@@ -151,13 +159,12 @@ body {
   box-shadow: 0px 2px 0 2px hsl(349, 81%, 39%);
 }
 .computer-container {
-  position: absolute;
+  position: relative;
+  left: 2em;
+  top: 1em;
   width: 5.5em;
   height: 5.5em;
   border-radius: 50%;
-  right: 40%;
-  top: 49%;
-  transform: translateX(-18%);
   background-color: rgb(9, 31, 78);
   display: none;
 }
@@ -166,26 +173,35 @@ body {
   padding: 8em 0;
   justify-content: center;
   border: 1px solid red;
+  position: relative;
 }
 .player-selection {
   position: relative;
-  right: 2.5em;
+  right: 4.5em;
 }
 .computer-selection {
   position: relative;
-  left: 2.5em;
+  left: 3em;
 }
 .game-feedback {
   align-self: flex-end;
 }
 .win {
   margin-bottom: 1em;
+  left: 0.4em;
+  position: relative;
+  font-weight: 900;
 }
 .replay {
-  padding: 0.5em 1em;
+  padding: 0.5em 1.5em;
   border-radius: 10px;
+  font-size: 12px;
   border: none;
   color: blue;
+  cursor: pointer;
+}
+.replay:hover {
+  color: red;
 }
 .icon-show {
   display: block;
@@ -257,6 +273,46 @@ body {
 
   border: 1px solid red;
 }
+.animate {
+  z-index: -1;
+  position: relative;
+  top: -19.8em;
+  left: 2.5em;
+  display: none;
+}
+.animate .first-circle {
+  background-color: rgb(139, 139, 233);
+  opacity: 0.1;
+  position: absolute;
+  top: 19rem;
+  right: -2.5rem;
+  transform: translateY(13rem);
+}
+
+.animate .second-circle {
+  background-color: rgb(120, 120, 245);
+  opacity: 0.1;
+  position: absolute;
+  top: 19rem;
+  right: -2.5rem;
+  transform: translateY(13rem);
+}
+
+.animate .third-circle {
+  background-color: rgb(128, 128, 233);
+  opacity: 0.1;
+  position: absolute;
+  top: 19rem;
+  right: -2.5rem;
+  transform: translateY(13rem);
+}
+.animate .first-circle,
+.animate .second-circle,
+.animate .third-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+}
 
 @media (min-width: 1330px) {
   .modal {
@@ -265,7 +321,12 @@ body {
     transform: translate(-50%, 40%);
   }
 }
-@media (max-width: 600px) {
+@media (min-width: 601px) {
+  .replay {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 700px) {
   .icon-symbol-wrap {
     width: 80px;
     height: 80px;
@@ -287,5 +348,42 @@ body {
     top: 9em;
     height: 110px;
     width: 110px;
+  }
+  .rules {
+    justify-content: center;
+  }
+  .player-selection {
+    right: 1.5em;
+  }
+  .computer-selection {
+    position: relative;
+    left: 1.5em;
+  }
+  .game-feedback {
+    position: absolute;
+    bottom: 2em;
+  }
+  .win {
+    font-size: 0.7rem;
+    left: 0.5em;
+    position: relative;
+  }
+  .replay {
+    font-size: 0.6rem;
+  }
+  .computer-container {
+    width: 4.5em;
+    height: 4.5em;
+  }
+  .animate .first-circle,
+  .animate .second-circle,
+  .animate .third-circle {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    width: 80%;
   }
 }
