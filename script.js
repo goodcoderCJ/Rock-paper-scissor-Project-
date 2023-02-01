@@ -32,7 +32,6 @@ const beforeMainComp = document.querySelector(".computer-container");
 //variables for processing game
 let iconState = false;
 let playerSelection;
-let anySelected = [];
 let compSelection;
 let WinText;
 let score = 0;
