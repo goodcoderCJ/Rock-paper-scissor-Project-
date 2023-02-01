@@ -35,7 +35,6 @@ body {
   margin: 4em auto;
   padding: 2em 0;
   width: 50%;
-  border: 1px solid red;
 }
 .img {
   max-width: 100%;
@@ -84,7 +83,7 @@ body {
   display: none;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid red;
+
   position: relative;
   top: 9em;
   font-size: 0.7rem;
@@ -104,7 +103,6 @@ body {
   visibility: visible;
 }
 .paper-scissors-enclose {
-  border: 1px solid purple;
   display: flex;
   justify-content: center;
 }
@@ -172,7 +170,7 @@ body {
   display: none;
   padding: 8em 0;
   justify-content: center;
-  border: 1px solid red;
+
   position: relative;
 }
 .player-selection {
@@ -188,7 +186,7 @@ body {
 }
 .win {
   margin-bottom: 1em;
-  left: 0.4em;
+  left: 0.8em;
   position: relative;
   font-weight: 900;
 }
@@ -234,14 +232,13 @@ body {
   left: 50%;
   transform: translate(-50%, 40%);
   display: none;
-  border: 2px solid green;
+
   padding: 1em;
 }
 .modal-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
 }
 #modal-heading {
   color: var(--header-outline);
@@ -264,47 +261,43 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 0.8em;
-
-  border: 1px solid red;
 }
 #image-modal {
   width: 140px;
   height: 140px;
-
-  border: 1px solid red;
 }
 .animate {
   z-index: -1;
   position: relative;
-  top: -19.8em;
-  left: 2.5em;
+  top: -8em;
+  left: 2em;
   display: none;
 }
 .animate .first-circle {
   background-color: rgb(139, 139, 233);
   opacity: 0.1;
   position: absolute;
-  top: 19rem;
-  right: -2.5rem;
-  transform: translateY(13rem);
+  top: 7em;
+  right: -2.5em;
+  transform: translateY(5em);
 }
 
 .animate .second-circle {
   background-color: rgb(120, 120, 245);
   opacity: 0.1;
   position: absolute;
-  top: 19rem;
-  right: -2.5rem;
-  transform: translateY(13rem);
+  top: 7em;
+  right: -2.5em;
+  transform: translateY(5em);
 }
 
 .animate .third-circle {
   background-color: rgb(128, 128, 233);
   opacity: 0.1;
   position: absolute;
-  top: 19rem;
-  right: -2.5rem;
-  transform: translateY(13rem);
+  top: 7em;
+  right: -2.5em;
+  transform: translateY(5em);
 }
 .animate .first-circle,
 .animate .second-circle,
@@ -365,7 +358,7 @@ body {
   }
   .win {
     font-size: 0.7rem;
-    left: 0.5em;
+    left: 0.6em;
     position: relative;
   }
   .replay {

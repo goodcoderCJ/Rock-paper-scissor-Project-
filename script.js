@@ -108,6 +108,9 @@ const firstCircle = document.querySelector(".first-circle");
 const secondCircle = document.querySelector(".second-circle");
 const thirdCircle = document.querySelector(".third-circle");
 const animateContainer = document.querySelector(".animate");
+let winningSound = new Audio(
+  "./audio/mixkit-huge-crowd-cheering-victory-462.wav"
+);
 // function to determine winner
 function determineWinner() {
   if (playerSelection === "paper") {
@@ -135,21 +138,24 @@ function determineWinner() {
       WinText = "DRAW GAME";
     }
   }
+  function interval() {
+    setInterval(() => {
+      firstCircle.style.transform = `scale(1)`;
+      secondCircle.style.transform = `scale(1.2)`;
+      thirdCircle.style.transform = `scale(1.5)`;
+      setInterval(() => {
+        firstCircle.style.transform = `scale(1.2)`;
+        secondCircle.style.transform = `scale(1.5)`;
+        thirdCircle.style.transform = `scale(1.7)`;
+      }, 1000);
+    }, 2000);
+  }
   switch (WinText.toLowerCase()) {
     case "you win":
       score++;
       winningSound.play();
       animateContainer.style.display = "block";
-      interval = setInterval(() => {
-        firstCircle.style.transform = `scale(1)`;
-        secondCircle.style.transform = `scale(1.2)`;
-        thirdCircle.style.transform = `scale(1.5)`;
-        setInterval(() => {
-          firstCircle.style.transform = `scale(1.2)`;
-          secondCircle.style.transform = `scale(1.5)`;
-          thirdCircle.style.transform = `scale(1.7)`;
-        }, 1000);
-      }, 2000);
+      interval();
       break;
     case "you lose":
       score--;
@@ -158,7 +164,8 @@ function determineWinner() {
       break;
     case "draw game":
       score = score;
-      animateContainer.style.display = "block";
+      animateContainer.style.display = "none";
+      clearInterval(interval);
   }
 
   scoreElement.textContent = score;
@@ -185,7 +192,12 @@ function determineWinner() {
   }
 }
 function replayGame() {
-  winningSound.pause();
+  if (winningSound.play()) {
+    winningSound.pause();
+  } else {
+    winningSound.pause();
+  }
+  animateContainer.style.display = "none";
   iconsWrap.style.display = "block";
   iconShowAfterSelect.style.display = "none";
   playerComPickedText.style.display = "none";
@@ -200,9 +212,6 @@ function replayGame() {
     computerCount = 0;
   }
 }
-let winningSound = new Audio(
-  "./audio/mixkit-huge-crowd-cheering-victory-462.wav"
-);
 
 getEachIcon.forEach((icon) => {
   icon.addEventListener("click", getResult);
